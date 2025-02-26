@@ -1,5 +1,5 @@
-alert("Testando");
-let numeroSecreto = prompt("Digite um número:");
+alert("Bem vindos ao jogo adivinhando o número secreto");
+let numeroSecreto = parseInt(Math.random()*10 +30);
 console.log(numeroSecreto);
 let chute ;
 let tentativas = 1;
@@ -22,8 +22,11 @@ while(chute != numeroSecreto){
 }
 }
 
-if (tentativas > 1){
-    alert(`Você descobriu o número secreto ${numeroSecreto} com ${tentativas} tentativas.` );
-}else{alert(`Você descobriu o número secreto ${numeroSecreto} com ${tentativas} tentativa.` );}
+
+let palavraTentativa = tentativa > 1 ? tentativas : tentativa;
+alert(`Você descobriu o número secreto ${numeroSecreto} com ${tentativas} ${palavraTentativa}.` );
+//if (tentativas > 1){
+  //  alert(`Você descobriu o número secreto ${numeroSecreto} com ${tentativas} tentativas.` );
+//}else{alert(`Você descobriu o número secreto ${numeroSecreto} com ${tentativas} tentativa.` );}
 
 
