@@ -1,5 +1,5 @@
 alert("Testando");
-let numeroSecreto = 29;
+let numeroSecreto = prompt("Digite um número:");
 console.log(numeroSecreto);
 let chute ;
 let tentativas = 1;
@@ -8,17 +8,22 @@ let tentativas = 1;
 while(chute != numeroSecreto){
     chute = prompt("Escolha um número entre 1 e 30:")
     if (chute == numeroSecreto){
-        alert(`Você descobriu o número secreto ${numeroSecreto} com ${tentativas} tentativas.` );
+        break;
+        
     
     } else{
         if(chute>numeroSecreto){
         alert(`O número Secreto é maior que ${chute}`);
         }else{
-        alert(`O número Secreto é mamenor que ${chute}`);
+        alert(`O número Secreto é menor que ${chute}`);
     }
     //tentativas=tentativas + 1
     tentativas++;
 }
 }
+
+if (tentativas > 1){
+    alert(`Você descobriu o número secreto ${numeroSecreto} com ${tentativas} tentativas.` );
+}else{alert(`Você descobriu o número secreto ${numeroSecreto} com ${tentativas} tentativa.` );}
 
 
